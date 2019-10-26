@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>[最終hw]Bootstrap-checkout-3.1</title>
+    <link rel="stylesheet" href="stylesheets/fontAwesome.css">
+    <link rel="stylesheet" href="stylesheets/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <!-- 記得補充多一些head資訊 -->
+    <style>
+    .time-line{
+        position: relative;
+    }
+    .time-line:after{
+        content:"";
+        position:absolute;
+        left:15px;
+        right:15px;
+        top:50%;
+        transform:translateY(-50%);
+        height:1px;
+        background: #fff;
+    }
+    .time-point-border:after{
+        content:"";
+        position: absolute;
+        top:50%;
+        transform:translateY(-50%);
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background:#0e3052;
+        border:1px solid #cfd6dc;
+        z-index: 1;
+    }
+    .time-point-circle:after{
+        content:"";
+        position: absolute;
+        top:50%;
+        transform:translateY(-50%);
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background:#cfd6dc;
+        border:1px solid #cfd6dc;
+        z-index: 1;
+    }
+    .time-point-center{
+        content:"";
+        position: absolute;
+        top:50%;
+        transform:translateY(-50%);
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background:#cfd6dc;
+        z-index: 2;
+    }
+    .time-hook{
+        content:"";
+        position: absolute;
+        top:50%;
+        transform:translateY(-50%);
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        color:#0e3052;
+        z-index: 2;
+    }
+    .height-60px{
+        height: 60px;
+    }
+    </style>
+</head>
+
+<body class="bg-info">
+    <nav class="navbar navbar-expand-md navbar-light p-0">
+        <div class="container">
+            <button class="navbar-toggler border-0" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand d-none d-md-inline-block" href="#"><img src="image/header_logo.png" alt="coffee_Logo_PC"
+                    width="200px"></a>
+            <a class="navbar-brand d-inline-block d-md-none" href="#"><img src="image/header_logo.png" alt="coffee_Logo_Mobile"
+                    width="150px"></a>
+            <a href="cart.html" class="nav-link d-flex order-md-1 text-primary h5 mb-0"><i class="fas fa-shopping-cart"></i></a>
+            <div class="collapse navbar-collapse ml-auto" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item ml-3">
+                        <a class="nav-link text-primary h5 mb-0" href="index.html">首頁 <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active ml-3">
+                        <a class="nav-link text-primary h5 mb-0" href="product.html">咖啡</a>
+                    </li>
+                    <li class="nav-item ml-3">
+                        <a class="nav-link text-primary h5 mb-0" href="login.html">登入</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="checkout-main container text-lightBlue-0 mb-5">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="row justify-content-center  bg-primary">
+                        <div class="col-11">
+                            <div class="row">
+                                <div class="col-6">
+                                    <p class="h1 py-4">發票</p>
+                                </div>
+                                <div class="col-6 time-line">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="time-point-circle">
+                                            <div class="time-hook" style="margin-top:-2px;margin-left:8px;">
+                                                <i class="fas fa-check"></i>
+                                            </div>
+                                        </div>
+                                        <div class="time-point-circle">
+                                            <div class="time-hook" style="margin-top:-2px;margin-left:8px;">
+                                                <i class="fas fa-check"></i>
+                                            </div>
+                                        </div>
+                                        <div class="time-point-border" style="margin-right:30px;">
+                                            <span class="time-point-center" style="margin-left:5px;"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="list-group d-flex flex-row mb-5 text-center h3">
+                                        <a href="#pane-1" class="list-group-item list-group-item-action active rounded-0 height-60px" data-toggle="list">電子發票</a>
+                                        <a href="#pane-2" class="list-group-item list-group-item-action rounded-0 height-60px" data-toggle="list">郵寄發票</a>
+                                    </div>
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="pane-1" role="tabpanel">
+                                            <form>
+                                                <div class="form-group">
+                                                    <label for="inputTel"><span class="h3">電子郵件信箱</span></label>
+                                                    <input type="num" class="form-control height-60px rounded-0" id="inputTel" placeholder="nicecoffee@gmail.com">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="inputTel"><span class="h3">統一編號(選填)</span></label>
+                                                    <input type="text" class="form-control height-60px rounded-0" id="inputTel" placeholder="73502634">
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="tab-pane" id="pane-2" role="tabpanel">
+                                            <form>
+                                                <div class="form-row">
+                                                    <div class="form-group col-6">
+                                                        <label for="inputCity"><span class="h3">地址</span></label>
+                                                        <select id="inputCity" class="custom-select height-60px rounded-0">
+                                                            <option selected>台北市</option>
+                                                            <option>桃園市</option>
+                                                            <option>台中市</option>
+                                                            <option>台南市</option>
+                                                            <option>花蓮縣</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="form-group text-right">
+                                                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                                            <label class="form-check-label" for="exampleCheck1">同運送地址</label>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="sr-only" for="inputState">State</label>
+                                                            <select id="inputState" class="custom-select height-60px rounded-0">
+                                                                <option selected>信義區</option>
+                                                                <option>松山區</option>
+                                                                <option>士林區</option>
+                                                                <option>北投區</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group col-md-12">
+                                                        <label class="sr-only" for="inputAddress2">Address</label>
+                                                        <input type="text" class="form-control height-60px rounded-0" id="inputAddress2" placeholder="悠閒路愜意街99號">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="inputTel"><span class="h3">統一編號(選填)</span></label>
+                                                    <input type="text" class="form-control height-60px rounded-0" id="inputTel" placeholder="73502634">
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="checkout-success.html" class="btn btn-secondary btn-block rounded-0 border-0 text-primary font-weight-bolder py-2" style="font-size:32px;">下一步</a>
+                    </div>
+                </div>
+                <div class="d-none col-lg-4 d-lg-flex flex-column">
+                    <div class="mb-3 border border-lightBlue-0">
+                        <div class="h4 bg-lightBlue-0 text-primary text-center p-3 font-weight-bolder mb-0">訂單摘要</div>
+                    <table class="table table-borderless mb-0 bg-white">
+                        <tbody>
+                            <tr class="text-lightBlue-1">
+                                <th scope="row">小計</th>
+                                <td class="text-right">NT$5,383</th>
+                            </tr>
+                            <tr class="text-lightBlue-1">
+                                <th scope="row">運費</th>
+                                <td class="text-right">NT$120</td>
+                            </tr>
+                            <tr class="text-primary" style="font-size:24px">
+                                <th scope="row">總計</th>
+                                <td class="text-right">NT$5,503</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                    <div class="border border-lightBlue-0">
+                        <div class="h4 bg-lightBlue-0 text-primary text-center p-3 font-weight-bolder mb-0">購物清單</div>
+                        <div class="container text-primary bg-white py-3">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="w-100 bg-cover" style="background-image:url(image/product_Grinder.jpg) ;min-height:88px;"></div>
+                                </div>
+                                <div class="col-6 py-2 pl-4">
+                                    <p class="mb-2">電動磨豆機(1)</p>
+                                    <p>NT$ 2,720</p>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-6">
+                                    <div class="w-100 bg-cover" style="background-image:url(image/product_coffee_bean_4.jpg);min-height:88px;"></div>
+                                </div>
+                                <div class="col-6 py-2 pl-4">
+                                    <p class="mb-2">義式配方-極致(5)</p>
+                                    <p class="mb-0">NT$ 1,600</p>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-6">
+                                    <div class="w-100 bg-cover" style="background-image:url(image/product_coffee_bean_2.jpg);min-height:88px;"></div>
+                                </div>
+                                <div class="col-6 py-2 pl-4">
+                                    <p class="mb-2">安提拉花神(1)</p>
+                                    <p>NT$ 1,063</p>
+                                </div>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <footer>
+        <div class="bg-secondary">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-10">
+                        <div class="row justify-content-between align-items-center">
+                            <div class="col-md-6 mb-3 mb-md-0">
+                                <div class="d-flex align-items-center">
+                                    <div>
+                                        <img width="100px" src="image/footer-topBlock-icon.png" alt="coffee_icon">
+                                    </div>
+                                    <p class="p-margin-block-0 text-primary w-100 h3 text-center text-md-left">再忙，也要和你喝杯咖啡。</p>      
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-3 mb-md-0">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text bg-white border-0 rounded-0 text-primary" id="basic-addon1"><i class="fas fa-envelope"></i></span>
+                                    </div>
+                                    <input type="text" class="form-control border-0 rounded-0" aria-label="Username" aria-describedby="basic-addon1" style="height:50px;">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-primary rounded-0" type="button" id="button-addon2">
+                                            <i class="fas fa-long-arrow-alt-right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-primary py-3">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-10">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="d-flex flex-column">
+                                    <div class="mb-4 mb-md-5">
+                                        <img src="image/footer_logo.png" alt="footer_logo" width="200px">
+                                    </div>
+                                    <div class="mb-4 mt-md-5 mb-3">
+                                        <p class="p-margin-block-0 text-white">02-9876-5432</p>
+                                        <p class="p-margin-block-0 text-white">nicecoffee@email.com</p>
+                                        <p class="p-margin-block-0 text-white">台北市信義區悠閒路愜意街99號</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-md-flex flex-row-reverse text-white d-none letter-spacing">
+                                    <p class="h3 text-md-vertical p-margin-block-0">今天是個<span class="center-line-white"></span></p>    
+                                    <p class="h3 text-md-vertical p-margin-block-0">喝咖啡的好日子。</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-2">
+                                <a class="mr-2 text-white" href="#"><i class="fab fa-2x fa-instagram"></i></a>
+                                <a class="mr-2 text-white" href="#"><i class="fab fa-2x fa-google-plus-square"></i></a>
+                                <a class="mr-2 text-white" href="#"><i class="fab fa-2x fa-twitter-square"></i></a>
+                                <a class="mr-2 text-white" href="#"><i class="fab fa-2x fa-facebook-square"></i></a>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="text-white text-center text-md-right">
+                                    <span>© 2019 NiceCofffee All Rights Reserved</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

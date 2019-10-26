@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>[最終hw]Bootstrap-checkout-1</title>
+    <link rel="stylesheet" href="stylesheets/fontAwesome.css">
+    <link rel="stylesheet" href="stylesheets/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <!-- 記得補充多一些head資訊 -->
+    <style>
+    .time-line{
+        position: relative;
+    }
+    .time-line:after{
+        content:"";
+        position:absolute;
+        left:15px;
+        right:15px;
+        top:50%;
+        transform:translateY(-50%);
+        height:1px;
+        background: #fff;
+    }
+    .time-point-border:after{
+        content:"";
+        position: absolute;
+        top:50%;
+        transform:translateY(-50%);
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background:#0e3052;
+        border:1px solid #cfd6dc;
+        z-index: 1;
+    }
+    .time-point-center{
+        content:"";
+        position: absolute;
+        top:50%;
+        transform:translateY(-50%);
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background:#cfd6dc;
+        z-index: 2;
+    }
+    .height-60px{
+        height: 60px;
+    }
+    </style>
+</head>
+
+<body class="bg-info">
+    <nav class="navbar navbar-expand-md navbar-light p-0">
+        <div class="container">
+            <button class="navbar-toggler border-0" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand d-none d-md-inline-block" href="index.html"><img src="image/header_logo.png" alt="coffee_Logo"
+                    width="200px"></a>
+            <a class="navbar-brand d-inline-block d-md-none" href="index.html"><img src="image/header_logo.png" alt="coffee_Logo"
+                    width="150px"></a>
+            <a href="cart.html" class="nav-link d-flex order-md-1 text-primary h5 mb-0"><i class="fas fa-shopping-cart"></i></a>
+            <div class="collapse navbar-collapse ml-auto" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item ml-3">
+                        <a class="nav-link text-primary h5 mb-0" href="index.html">首頁 <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active ml-3">
+                        <a class="nav-link text-primary h5 mb-0" href="product.html">咖啡</a>
+                    </li>
+                    <li class="nav-item ml-3">
+                        <a class="nav-link text-primary h5 mb-0" href="login.html">登入</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="checkout-main container text-primary mb-5">
+            <div class="row">
+                <div class="col-lg-8">
+                    <span class="h4 bg-lightBlue-0 text-primary text-center p-3 font-weight-bolder d-block letter-spacing">您的購物車</span>
+                    <div class="row align-items-center mb-3">
+                        <div class="col-2">
+                            <img src="image/product_Grinder.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="col-3">
+                            <p>電動磨豆機</p>
+                            <p>NT$2,720</p>
+                        </div>
+                        <div class="col-3">
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button type="button" class="btn btn-outline-lightBlue-1">-</button>
+                                <button type="button" class="btn btn-outline-lightBlue-1"><span class="text-primary">1</span></button>
+                                <button type="button" class="btn btn-outline-lightBlue-1">+</button>
+                            </div>
+                        </div>
+                        <div class="col-3">NT$2,720</div>
+                        <div class="col-1"><i class="fas fa-trash-alt"></i></div>
+                    </div>
+                    <hr>
+                    <div class="row align-items-center mb-3">
+                        <div class="col-2">
+                            <img src="image/product_coffee_bean_4.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="col-3">
+                            <p>義式配方(極致)</p>
+                            <p>NT$320</p>
+                        </div>
+                        <div class="col-3">
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button type="button" class="btn btn-outline-lightBlue-1">-</button>
+                                <button type="button" class="btn btn-outline-lightBlue-1"><span class="text-primary">5</span></button>
+                                <button type="button" class="btn btn-outline-lightBlue-1">+</button>
+                            </div>
+                        </div>
+                        <div class="col-3">NT$1,600</div>
+                        <div class="col-1"><i class="fas fa-trash-alt"></i></div>
+                    </div>
+                    <hr>
+                    <div class="row align-items-center">
+                        <div class="col-2">
+                            <img src="image/product_coffee_bean_2.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="col-3">
+                            <p>安提拉花神</p>
+                            <p>NT$1,063</p>
+                        </div>
+                        <div class="col-3">
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button type="button" class="btn btn-outline-lightBlue-1">-</button>
+                                <button type="button" class="btn btn-outline-lightBlue-1"><span class="text-primary">1</span></button>
+                                <button type="button" class="btn btn-outline-lightBlue-1">+</button>
+                            </div>
+                        </div>
+                        <div class="col-3">NT$1,063</div>
+                        <div class="col-1"><i class="fas fa-trash-alt"></i></div>
+                    </div>
+                    <!-- <a href="checkout-1.html" class="btn btn-secondary btn-block rounded-0 border-0 text-primary font-weight-bolder py-2" style="font-size:32px;">下一步</a> -->
+                </div>
+                <div class="col-lg-4 d-none d-lg-block"><!--這邊有改，其他參考一下-->
+                    <div class="bg-primary">
+                        <div class="h4 text-center p-3 font-weight-bolder mb-0 text-white">訂單摘要</div>
+                        <hr class="border border-lightBlue-1 mx-3 my-0">
+                    <table class="table table-borderless mb-0 text-white">
+                        <tbody>
+                            <tr>
+                                <th class="font-weight-light" scope="row">小計</th>
+                                <td class="text-right">NT$5,383</th>
+                            </tr>
+                            <tr>
+                                <th class="font-weight-light" scope="row">運費</th>
+                                <td class="text-right">NT$120</td>
+                            </tr>
+                            <tr style="font-size:24px">
+                                <th scope="row">總計</th>
+                                <td class="text-right">NT$5,503</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <a href="checkout-1.html" class="btn btn-secondary btn-block rounded-0 border-0 text-primary font-weight-bolder py-2" style="font-size:24px;">結帳</a>
+                </div>
+            </div>
+    </section>
+    <footer>
+        <div class="bg-secondary">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-10">
+                        <div class="row justify-content-between align-items-center">
+                            <div class="col-md-6 mb-3 mb-md-0">
+                                <div class="d-flex align-items-center">
+                                    <div>
+                                        <img width="100px" src="image/footer-topBlock-icon.png" alt="coffee_icon">
+                                    </div>
+                                    <p class="p-margin-block-0 text-primary w-100 h3 text-center text-md-left">再忙，也要和你喝杯咖啡。</p>      
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-3 mb-md-0">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text bg-white border-0 rounded-0 text-primary" id="basic-addon1"><i class="fas fa-envelope"></i></span>
+                                    </div>
+                                    <input type="text" class="form-control border-0 rounded-0" aria-label="Username" aria-describedby="basic-addon1" style="height:50px;">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-primary rounded-0" type="button" id="button-addon2">
+                                            <i class="fas fa-long-arrow-alt-right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-primary py-3">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-10">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="d-flex flex-column">
+                                    <div class="mb-4 mb-md-5">
+                                        <img src="image/footer_logo.png" alt="footer_logo" width="200px">
+                                    </div>
+                                    <div class="mb-4 mt-md-5 mb-3">
+                                        <p class="p-margin-block-0 text-white">02-9876-5432</p>
+                                        <p class="p-margin-block-0 text-white">nicecoffee@email.com</p>
+                                        <p class="p-margin-block-0 text-white">台北市信義區悠閒路愜意街99號</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-md-flex flex-row-reverse text-white d-none letter-spacing">
+                                    <p class="h3 text-md-vertical p-margin-block-0">今天是個<span class="center-line-white"></span></p>    
+                                    <p class="h3 text-md-vertical p-margin-block-0">喝咖啡的好日子。</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-2">
+                                <a class="mr-2 text-white" href="#"><i class="fab fa-2x fa-instagram"></i></a>
+                                <a class="mr-2 text-white" href="#"><i class="fab fa-2x fa-google-plus-square"></i></a>
+                                <a class="mr-2 text-white" href="#"><i class="fab fa-2x fa-twitter-square"></i></a>
+                                <a class="mr-2 text-white" href="#"><i class="fab fa-2x fa-facebook-square"></i></a>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="text-white text-center text-md-right">
+                                    <span>© 2019 NiceCofffee All Rights Reserved</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

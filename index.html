@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>[最終hw]Bootstrap-home</title>
+    <link rel="stylesheet" href="stylesheets/fontAwesome.css">
+    <link rel="stylesheet" href="stylesheets/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <!-- 記得補充多一些head資訊 -->
+</head>
+
+<body class="bg-info">
+    <nav class="navbar navbar-expand-md navbar-light p-0">
+        <div class="container">
+            <button class="navbar-toggler border-0" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand d-none d-md-inline-block" href="index.html"><img src="image/header_logo.png" alt="coffee_Logo" width="200px"></a>
+            <a class="navbar-brand d-inline-block d-md-none" href="index.html"><img src="image/header_logo.png" alt="coffee_Logo" width="150px"></a>
+            <a href="cart.html" class="nav-link d-flex order-md-1 text-primary h5 mb-0"><i class="fas fa-shopping-cart"></i></a>
+            <div class="collapse navbar-collapse ml-auto" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active ml-3">
+                        <a class="nav-link text-primary h5 mb-0" href="index.html">首頁 <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item ml-3">
+                        <a class="nav-link text-primary h5 mb-0" href="product.html">咖啡</a>
+                    </li>
+                    <li class="nav-item ml-3">
+                        <a class="nav-link text-primary h5 mb-0" href="login.html">登入</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="header" style="margin-bottom:250px;">
+        <div class="container">
+            <div class="jumbotron jumbotron-bg bg-cover" style="background-image: url(image/index_header_banner.jpg);">
+                <div class="row justify-content-center no-md-gutters">
+                    <div class="col-md-10">
+                        <div class="row" style="position: absolute;left: 0;right: 0; top:350px;">
+                            <a class="col-4 text-center p-5 block-wrap active" href="#">
+                                <span class="text-md-vertical block-fontSet">本日精選</span>
+                                <div class="block-color"></div>
+                                <div class="block-img bg-cover"
+                                    style="background-image: url(image/index_header_block_01.jpg);">
+                                </div>
+                            </a>
+                            <a class="col-4 text-center p-5 block-wrap border-left" href="#">
+                                <span class="text-md-vertical block-fontSet">人氣推薦</span>
+                                <div class="block-color"></div>
+                                <div class="block-img bg-cover"
+                                    style="background-image: url(image/index_header_block_02.jpg);">
+                                </div>
+                            </a>
+                            <a class="col-4 text-center p-5 block-wrap border-left" href="#">
+                                <span class="text-md-vertical block-fontSet">新品上市</span>
+                                <div class="block-color"></div>
+                                <div class="block-img bg-cover"
+                                    style="background-image: url(image/index_header_block_03.jpg);">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container d-md-none d-block" style="margin-bottom: 70px;">
+        <div class="row justify-content-center">
+            <div class="col-8">
+                <img class="img-fluid" src="image/sm-橫式-為什麼選擇了咖啡.png">
+            </div>
+        </div>
+    </div>
+    <section class="bg-primary" style="margin-bottom:100px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 margin-bottom margin-top">
+                    <div class="h-100 bg-cover" style="background-image:url(image/index_main_content_01.jpg);min-height: 300px;"></div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-8 text-white align-self-center">
+                            <div class="d-flex justify-content-center">
+                                <p class="text-md-vertical letter-spacing text-justify mt-3 mt-md-0">你知道嗎?<br>喝咖啡有益身心靈健康，<br>從古至今，<br>從平民到皇家貴族，<br>飲咖啡蔚為潮流，<br>每日晨起必備飲品，<br>正可謂送禮自用兩相宜，<br>實屬家家必備良品。</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 d-none d-md-block">
+                            <img class="margin-top pt-3 pb-5" src="image/lg-為什麼選擇了咖啡.png" width="100px">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container d-md-none d-block" style="margin-bottom: 80px;">
+        <div class="row justify-content-center">
+            <div class="col-9">
+                <img class="img-fluid" src="image/sm-橫式-為什麼一定要喝咖啡.png">
+            </div>
+        </div>
+    </div>
+    <section class="bg-primary mb-md-100px">
+        <div class="container">
+            <div class="row flex-row-reverse">
+                <div class="col-md-6 margin-bottom margin-top">
+                    <div class="h-100 bg-cover" style="background-image:url(image/index_main_content_02.jpg);min-height:300px;"></div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-8 text-white align-self-center">
+                            <div class="row justify-content-center">
+                                <div class="col-md-3">
+                                    <p class="text-md-vertical">同時，咖啡裡含有人體所需的抗氧化劑，<br>和大多數水果一樣，<br>具有維生素<span class="text-horizontal align-middle">C</span>、維生素<span class="text-horizontal align-middle">E</span>。</p>
+                                </div>
+                                <div class="col-md-3">
+                                    <p class="text-md-vertical">咖啡因能夠提神醒腦、減少心理疲勞，<br>這樣你就可以更好的集中精力工作。<br>喝咖啡可以增強記憶力，<br>研究指出，<br>咖啡因可以提高你在一天內的記憶儲存能力。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 d-none d-md-block">
+                            <img class="margin-top pt-3 pb-5" src="image/lg-為什麼一定要喝咖啡.png" width="100px">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+    <div class="container d-none d-md-block">
+        <div class="d-flex flex-row-reverse justify-content-center text-primary letter-spacing">
+            <p class="text-md-vertical h1 p-margin-block-0">想喝咖啡<span class="center-line-primary"></span></p>
+            <p class="text-md-vertical h1 p-margin-block-0 mt-3">是不需要理由的。</p>
+        </div>
+    </div>
+    <div class="container d-block d-md-none">
+        <div class="row justify-content-center">
+            <div class="col-9">
+                <img class="img-fluid my-5" src="image/sm-橫式-想喝咖啡是不需要理由的.png">
+            </div>
+        </div>
+    </div>
+    </section>
+    <section class="container mb-5">
+        <div class="row font-weight-bold justify-content-center">
+            <div class="col-md-4 mb-4">
+                <div class="card" style="position:relative;">
+                    <div class="text-md-vertical bg-primary text-white px-2 pt-2 letter-spacing" style="position:absolute; left:30px;">本日精選</div>
+                    <div class="text-white" style="position:absolute; right:30px; top:15px;"><i class="far fa-2x fa-heart"></i></div>
+                    <img class="img-fluid" src="image/main_addCart_ColdDrip.jpg" alt="cold-brew">
+                    <div class="card-body p-0">
+                        <div class="row  text-center mx-0 bg-info">
+                            <div class="col-6 px-0">
+                                <p class="border-line p-2 p-margin-block-0  h4">冰滴咖啡組</p>
+                            </div>
+                            <div class="col-6 px-0">
+                                <p class="border-line p-2 p-margin-block-0  h4">NT$2680</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer p-0 border-top-0">
+                        <a href="#" class="btn btn-primary btn-block rounded-0 py-3"><span class="h3">加入購物車</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card" style="position:relative;">
+                    <div class="text-md-vertical bg-primary text-white px-2 pt-2 letter-spacing" style="position:absolute; left:30px;">本日精選</div>
+                    <div class="text-white" style="position:absolute; right:30px; top:15px;"><i class="far fa-2x fa-heart"></i></div>
+                    <img class="img-fluid" src="image/main_addCart_EspressoMachine.jpg" alt="cold-brew">
+                    <div class="card-body p-0">
+                        <div class="row  text-center mx-0 bg-info">
+                            <div class="col-6 px-0">
+                                <p class="border-line p-2 p-margin-block-0  h4">手沖咖啡組</p>
+                            </div>
+                            <div class="col-6 px-0">
+                                <p class="border-line p-2 p-margin-block-0  h4">NT$2980</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer p-0 border-top-0">
+                        <a href="#" class="btn btn-primary btn-block rounded-0 py-3"><span class="h3">加入購物車</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card" style="position:relative;">
+                    <div class="text-md-vertical bg-primary text-white px-2 pt-2 letter-spacing" style="position:absolute; left:30px;">本日精選</div>
+                    <div class="text-white" style="position:absolute; right:30px; top:15px;"><i class="far fa-2x fa-heart"></i></div>
+                    <img class="img-fluid" src="image/main_addCart_EspressoMachine.jpg" alt="cold-brew">
+                    <div class="card-body p-0">
+                        <div class="row  text-center mx-0 bg-info">
+                            <div class="col-6 px-0">
+                                <p class="border-line p-2 p-margin-block-0  h4">義式咖啡組</p>
+                            </div>
+                            <div class="col-6 px-0">
+                                <p class="border-line p-2 p-margin-block-0  h4">NT$32500</p>
+                            </div>
+                        </div>
+                    </div>
+                <div class="card-footer p-0 border-top-0">
+                    <a href="#" class="btn btn-primary btn-block rounded-0 py-3"><span class="h3">加入購物車</span></a>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="bg-secondary">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-10">
+                        <div class="row justify-content-between align-items-center">
+                            <div class="col-md-6 mb-3 mb-md-0">
+                                <div class="d-flex align-items-center">
+                                    <div>
+                                        <img width="100px" src="image/footer-topBlock-icon.png" alt="coffee_icon">
+                                    </div>
+                                    <p class="p-margin-block-0 text-primary w-100 h3 text-center text-md-left">再忙，也要和你喝杯咖啡。</p>
+                                </div>
+                            </div>
+                            <div class="col-md-5 mb-3 mb-md-0">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text bg-white border-0 rounded-0 text-primary" id="basic-addon1"><i class="fas fa-envelope"></i></span>
+                                    </div>
+                                    <input type="text" class="form-control border-0 rounded-0" aria-label="Username" aria-describedby="basic-addon1" style="height:50px;">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-primary rounded-0" type="button" id="button-addon2">
+                                            <i class="fas fa-long-arrow-alt-right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-primary py-3">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-10">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="d-flex flex-column">
+                                    <div class="mb-4 mb-md-5">
+                                        <img src="image/footer_logo.png" alt="footer_logo" width="200px">
+                                    </div>
+                                    <div class="mb-4 mt-md-5 mb-3">
+                                        <p class="p-margin-block-0 text-white">02-9876-5432</p>
+                                        <p class="p-margin-block-0 text-white">nicecoffee@email.com</p>
+                                        <p class="p-margin-block-0 text-white">台北市信義區悠閒路愜意街99號</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-md-flex flex-row-reverse text-white d-none letter-spacing">
+                                    <p class="h3 text-md-vertical p-margin-block-0">今天是個<span class="center-line-white"></span></p>
+                                    <p class="h3 text-md-vertical p-margin-block-0">喝咖啡的好日子。</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-2">
+                                    <a class="mr-2 text-white" href="#"><i class="fab fa-2x fa-instagram"></i></a>
+                                    <a class="mr-2 text-white" href="#"><i class="fab fa-2x fa-google-plus-square"></i></a>
+                                    <a class="mr-2 text-white" href="#"><i class="fab fa-2x fa-twitter-square"></i></a>
+                                    <a class="mr-2 text-white" href="#"><i class="fab fa-2x fa-facebook-square"></i></a>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="text-white text-center text-md-right">
+                                    <span>© 2019 NiceCofffee All Rights Reserved</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

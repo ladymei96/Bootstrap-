@@ -1,0 +1,21 @@
+body{
+    font-family: 'Noto Sans TC', sans-serif;
+    // font-family: 'Noto Serif TC', serif;
+}
+//文字樣式部分
+.letter-spacing{
+    letter-spacing: .5rem;
+}
+.collections-text-vertical{
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+}
+.text-horizontal{
+    writing-mode: horizontal-tb;
+}
+@media (min-width: 768px) {
+    .text-md-vertical{
+        -webkit-writing-mode: vertical-rl;
+        writing-mode: vertical-rl;
+    }
+}

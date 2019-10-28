@@ -1,0 +1,25 @@
+.p-margin-block-0{
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+@media(max-width:767px){
+    .px-xs-0{
+        padding-left:0;
+        padding-right:0;
+    }
+    .mb-xs-0{
+        margin-bottom:0;
+    }
+}
+@media (min-width: 768px) {
+    .margin-top{
+        margin-top:-30px; 
+    }
+    .margin-bottom{
+        margin-bottom:-30px;
+    }
+    .mb-md-100px{
+        margin-bottom: 100px;
+    }
+}
+

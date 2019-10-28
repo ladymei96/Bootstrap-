@@ -1,0 +1,62 @@
+//checkout-進度條部分
+@each $color, $value in $theme-colors{
+    .time-line-#{$color}{
+        position: relative;
+        &:after{
+            content:"";
+            position:absolute;
+            left:15px;
+            right:15px;
+            top:50%;
+            transform:translateY(-50%);
+            height:1px;
+            background: $value;  
+        }
+    }
+    .time-point-circle-#{$color}{
+        &:after{
+            content:"";
+            position: absolute;
+            top:50%;
+            transform:translateY(-50%);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background:$value;
+            border:1px solid $value;
+            z-index: 1;
+        }
+    }
+    .time-hook-#{$color}{
+        position: absolute;
+        top:50%;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        color:$value;
+        z-index: 2;
+    }
+}
+.time-point-border:after{
+    content:"";
+    position: absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background:#0e3052;
+    border:1px solid #cfd6dc;
+    z-index: 1;
+}
+.time-point-center{
+    position: absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background:#cfd6dc;
+    z-index: 2;
+}

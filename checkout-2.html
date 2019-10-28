@@ -6,71 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>[最終hw]Bootstrap-checkout-2</title>
+    <link rel="icon" href="image/favicon.ico" type="image/x-icon">
+    <!-- Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="咖啡電商" />
+    <meta property="og:description" content="全台最齊全咖啡專賣店，咖啡器材、代客烘豆應有盡有" />
+    <meta property="og:site_name" content="NiceCofffee-再忙也要和你喝杯咖啡" />
+    <meta property="og:logcal" content="zh-Tw" />
     <link rel="stylesheet" href="stylesheets/fontAwesome.css">
     <link rel="stylesheet" href="stylesheets/all.css">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
-    <!-- 記得補充多一些head資訊 -->
-    <style>
-    .time-line{
-        position: relative;
-    }
-    .time-line:after{
-        content:"";
-        position:absolute;
-        left:15px;
-        right:15px;
-        top:50%;
-        transform:translateY(-50%);
-        height:1px;
-        background: #fff;
-    }
-    .time-point-border:after{
-        content:"";
-        position: absolute;
-        top:50%;
-        transform:translateY(-50%);
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        background:#0e3052;
-        border:1px solid #cfd6dc;
-        z-index: 1;
-    }
-    .time-point-circle:after{
-        content:"";
-        position: absolute;
-        top:50%;
-        transform:translateY(-50%);
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        background:#cfd6dc;
-        border:1px solid #cfd6dc;
-        z-index: 1;
-    }
-    .time-point-center{
-        content:"";
-        position: absolute;
-        top:50%;
-        transform:translateY(-50%);
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        background:#cfd6dc;
-        z-index: 2;
-    }
-    .time-hook{
-        content:"";
-        position: absolute;
-        top:50%;
-        transform:translateY(-50%);
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        color:#0e3052;
-        z-index: 2;
-    }
-    </style>
 </head>
 
 <body class="bg-info">
@@ -110,10 +55,10 @@
                                 <div class="col-6">
                                     <p class="h1 py-4">付款</p>
                                 </div>
-                                <div class="col-6 time-line">
+                                <div class="col-6 time-line-lightBlue-0">
                                     <div class="d-flex justify-content-between">
-                                        <div class="time-point-circle">
-                                            <div class="time-hook" style="margin-top:-2px;margin-left:8px;">
+                                        <div class="time-point-circle-lightBlue-0">
+                                            <div class="time-hook-primary" style="margin-top:-2px;margin-left:8px;">
                                                 <i class="fas fa-check"></i>
                                             </div>
                                         </div>
@@ -127,7 +72,7 @@
                                 <div class="col-12">
                                     <form>
                                         <div class="form-group">
-                                            <label for="inputTel"><span class="h3">持卡人卡號</span></label>
+                                            <label for="inputTel"><span class="h3">信用卡卡號</span></label>
                                             <div class="input-group">
                                                 <input type="tel" class="form-control height-60px rounded-0 border-0" id="inputTel" placeholder="1234-5678-9012-3456" aria-label="Recipient's username" aria-describedby="basic-addon2">
                                                 <div class="input-group-append">

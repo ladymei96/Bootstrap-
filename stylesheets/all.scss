@@ -27,14 +27,24 @@ body{
     writing-mode: horizontal-tb;
 }
 .header{
-    .jumbotron-bg{
-        min-height: 496px;
+    .jumbotron-bg-height{
+        height: 496px;
         border-radius: 0;
-        position: relative;
-        z-index: -2;
         .block-wrap{
             position: relative;
             overflow: hidden;
+            z-index: 2;
+            &:hover{
+                .block-fontSet{
+                    color:$mainTone;
+                }
+                .block-color{
+                    background-color: rgba(200,169,126,0.6);
+                }
+                .block-img{
+                    filter:blur(0);
+                }
+            }
             .block-fontSet{
                 font-size:24px;
                 letter-spacing: 16px;
@@ -45,18 +55,18 @@ body{
             .block-fontSet{
                 color:$mainTone;
             }
+            .block-color{
+                background-color: rgba(200,169,126,0.6);
+            }
             .block-img{
                 filter: blur(0);
             }
         }
     }
 }
-
 .letter-spacing{
     letter-spacing: .5rem;
 }
-
-
 .block-color{
     position: absolute;
     left:0;
@@ -66,12 +76,9 @@ body{
     z-index: -1;
     background-color: rgba(14, 48, 82, 0.6);
     transition: background-color .5s;
-}
-
-.active{
-    .block-color{
-        background-color: rgba(200,169,126,0.6);
-    }
+    // &:hover{
+    //     background-color: rgba(200,169,126,0.6);
+    // }
 }
 .block-img{
     position: absolute;
@@ -82,7 +89,10 @@ body{
     z-index: -2;
     filter:blur(5px);
     transition:filter .5s;
-    }
+    // &:hover{
+    //     filter:blur(0);
+    // }
+}
 .bg-cover{
     background-size: cover;
     background-position: center center;

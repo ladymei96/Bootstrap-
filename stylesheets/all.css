@@ -11068,29 +11068,45 @@ body {
           writing-mode: horizontal-tb;
 }
 
-.header .jumbotron-bg {
-  min-height: 496px;
+.header .jumbotron-bg-height {
+  height: 496px;
   border-radius: 0;
-  position: relative;
-  z-index: -2;
 }
 
-.header .jumbotron-bg .block-wrap {
+.header .jumbotron-bg-height .block-wrap {
   position: relative;
   overflow: hidden;
+  z-index: 2;
 }
 
-.header .jumbotron-bg .block-wrap .block-fontSet {
+.header .jumbotron-bg-height .block-wrap:hover .block-fontSet {
+  color: #0e3052;
+}
+
+.header .jumbotron-bg-height .block-wrap:hover .block-color {
+  background-color: rgba(200, 169, 126, 0.6);
+}
+
+.header .jumbotron-bg-height .block-wrap:hover .block-img {
+  -webkit-filter: blur(0);
+          filter: blur(0);
+}
+
+.header .jumbotron-bg-height .block-wrap .block-fontSet {
   font-size: 24px;
   letter-spacing: 16px;
   color: #fff;
 }
 
-.header .jumbotron-bg .active .block-fontSet {
+.header .jumbotron-bg-height .active .block-fontSet {
   color: #0e3052;
 }
 
-.header .jumbotron-bg .active .block-img {
+.header .jumbotron-bg-height .active .block-color {
+  background-color: rgba(200, 169, 126, 0.6);
+}
+
+.header .jumbotron-bg-height .active .block-img {
   -webkit-filter: blur(0);
           filter: blur(0);
 }
@@ -11109,10 +11125,6 @@ body {
   background-color: rgba(14, 48, 82, 0.6);
   -webkit-transition: background-color .5s;
   transition: background-color .5s;
-}
-
-.active .block-color {
-  background-color: rgba(200, 169, 126, 0.6);
 }
 
 .block-img {

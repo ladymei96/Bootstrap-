@@ -10,12 +10,16 @@ body{
     -webkit-writing-mode: vertical-rl;
     writing-mode: vertical-rl;
 }
-.text-horizontal{
-    writing-mode: horizontal-tb;
-}
 @media (min-width: 768px) {
     .text-md-vertical{
         -webkit-writing-mode: vertical-rl;
         writing-mode: vertical-rl;
     }
+}
+
+.text-size-24px{
+    font-size:24px;
+}
+.text-size-32px{
+    font-size:32px;
 }

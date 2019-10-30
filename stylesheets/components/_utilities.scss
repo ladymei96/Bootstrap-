@@ -2,13 +2,22 @@
     background-size: cover;
     background-position: center center;
 }
-
 .border-line{
-    border: 1px solid $mainTone;
+    border: 1px solid $primary;
     border-collapse: collapse;
+}
+.border-bottom-line{
+    border-bottom:2px solid $sub-lightBlue;
+    height:43px;
 }
 .bg-lighter{
     background-color: rgba(255, 255, 255, 0.65);
+}
+.height-40px{
+    height:40px;
+}
+.height-50px{
+    height:50px;
 }
 .height-60px{
     height: 60px;
@@ -16,7 +25,7 @@
 @media (min-width: 992px) { 
     .checkout-main{
         .bg-lg-primary{
-            background-color: $mainTone;
+            background-color: $primary;
          }
         .text-lg-white{
             color:#fff;
@@ -26,10 +35,10 @@
 @media(max-width:991px){
     .checkout-main{
         .bg-xs-lightBlue-0{
-            background-color: $lightBlue;
+            background-color: $main-lightBlue;
         }
         .bg-xs-lightBlue-1{
-            background-color: $lightBlue-1;
+            background-color: $sub-lightBlue;
         }
     }
 }

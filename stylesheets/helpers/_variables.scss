@@ -44,10 +44,7 @@ $yellow:  #ffc107 !default;
 $green:   #28a745 !default;
 $teal:    #20c997 !default;
 $cyan:    #17a2b8 !default;
-$mainTone:    #0e3052;
-$subTone:     #c8a97e;
-$lightBlue:   #cfd6dc;
-$lightBlue-1: #98a6b2;
+
 
 $colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
@@ -70,34 +67,34 @@ $colors: map-merge(
   $colors
 );
 
-$primary:       $blue !default;
-$secondary:     $gray-600 !default;
+$primary:       #0e3052 !default;//$blue 
+$secondary:     #c8a97e !default;//$gray-600 
 $success:       $green !default;
-$info:          $cyan !default;
+$info:          #dcdcdc !default;//$cyan
 $warning:       $yellow !default;
 $danger:        $red !default;
 $light:         $gray-100 !default;
 $dark:          $gray-800 !default;
+$main-lightBlue:    #cfd6dc;
+$sub-lightBlue:     #98a6b2;
+$listActiveBg:      #c8b9a5;
 
 
 $theme-colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $theme-colors: map-merge(
   (
-    // "primary":    $primary,
-    "primary":    $mainTone,
-    // "secondary":  $secondary,
-    "secondary":  $subTone,
+    "primary":    $primary,
+    "secondary":  $secondary,
     "success":    $success,
-    // "info":       $info,
-    "info":       #dcdcdc,
+    "info":       $info,
     "warning":    $warning,
     "danger":     $danger,
     "light":      $light,
     "dark":       $dark,
     "white":      $white,
-    "lightBlue-0": $lightBlue,
-    "lightBlue-1": $lightBlue-1
+    "mainLightBlue": $main-lightBlue,
+    "subLightBlue":  $sub-lightBlue
   ),
   $theme-colors
 );
@@ -1015,18 +1012,18 @@ $list-group-item-padding-y:         .75rem !default;
 $list-group-item-padding-x:         1.25rem !default;
 
 // $list-group-hover-bg:               $gray-100 !default;
-$list-group-hover-bg:               $mainTone !default;
+$list-group-hover-bg:               $primary !default;
 // $list-group-active-color:           $component-active-color !default;
-$list-group-active-color:           $mainTone !default;
+$list-group-active-color:           $primary !default;
 // $list-group-active-bg:              $component-active-bg !default;
-$list-group-active-bg:              #c8b9a5 !default;
+$list-group-active-bg:              $listActiveBg !default;
 $list-group-active-border-color:    $list-group-active-bg !default;
 
 $list-group-disabled-color:         $gray-600 !default;
 $list-group-disabled-bg:            $list-group-bg !default;
 
 // $list-group-action-color:           $gray-700 !default;
-$list-group-action-color:           $mainTone !default;
+$list-group-action-color:           $primary !default;
 // $list-group-action-hover-color:     $list-group-action-color !default;
 $list-group-action-hover-color:     $white !default;
 

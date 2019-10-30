@@ -46,8 +46,8 @@
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background:#0e3052;
-    border:1px solid #cfd6dc;
+    background:$primary;
+    border:1px solid $main-lightBlue;
     z-index: 1;
 }
 .time-point-center{
@@ -57,6 +57,6 @@
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background:#cfd6dc;
+    background:$main-lightBlue;
     z-index: 2;
 }

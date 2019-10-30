@@ -8,7 +8,7 @@
             z-index: 2;
             &:hover{
                 .block-fontSet{
-                    color:$mainTone;
+                    color:$primary;
                 }
                 .block-color{
                     background-color: rgba(200,169,126,0.6);
@@ -46,7 +46,7 @@
         }
         .active{
             .block-fontSet{
-                color:$mainTone;
+                color:$primary;
             }
             .block-color{
                 background-color: rgba(200,169,126,0.6);
